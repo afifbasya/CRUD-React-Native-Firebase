@@ -6,6 +6,9 @@ const InputData = ({
   placeholder,
   keyboardType,
   isTextArea,
+  onChangeText,
+  namaState,
+  value
 }) => {
   if (isTextArea) {
     return (
@@ -17,6 +20,8 @@ const InputData = ({
           placeholder={placeholder}
           style={styles.textInputArea}
           keyboardType={keyboardType}
+          value={value}
+          onChangeText={(text) => onChangeText(namaState, text)}
         />
       </>
     );
@@ -29,6 +34,8 @@ const InputData = ({
         placeholder={placeholder}
         style={styles.textInput}
         keyboardType={keyboardType}
+        value={value}
+        onChangeText={(text) => onChangeText(namaState, text)}
       />
     </>
   );
