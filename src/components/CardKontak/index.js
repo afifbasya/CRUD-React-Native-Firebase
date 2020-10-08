@@ -13,7 +13,7 @@ const CardKontak = ({id, kontakItem, navigation, removeData}) => {
         <Text style={styles.noHP}>No. HP : {kontakItem.nomorHP}</Text>
       </View>
       <View style={styles.icon}>
-        <FontAwesomeIcon icon={faEdit} color={'orange'} size={25} />
+        <FontAwesomeIcon icon={faEdit} color={'orange'} size={25} onPress={() => navigation.navigate('EditKontak', {id: id})}/>
         <FontAwesomeIcon icon={faTimes} color={'red'} size={25} onPress={() => removeData(id)}/>
       </View>
     </TouchableOpacity>
